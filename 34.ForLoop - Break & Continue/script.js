@@ -16,7 +16,7 @@
 
 // console.log('Out of loop');
 
-// const user123 = ['YouRa', 'Allakhverdov', 1974, 'developer', ['Irina', 'Michael'], false];
+// const user123 = ['Aleksei', 'Kozlov', 1990, 'developer', ['Dims', 'Ales'], false];
 
 // const types = [];
 
@@ -41,22 +41,23 @@
 
 
 
-// continue & break
 
-const user123 = ['YouRa', 'Allakhverdov', 1974, 'developer', ['Irina', 'Michael'], false];
+// continue  &  break
+
+const user123 = ['Aleksei', 'Kozlov', 1990, 'developer', ['Dims', 'Ales'], false];
 
 console.log('CONTINUE EXAMPLE');
 
 for(let i = 0; i < user123.length; i++) {
-   if (typeof user123[i] !== 'string') continue;
+   if (typeof user123[i] !== 'string') continue; // выходит из текущей итерации цикла и не выводит элемент если его тип не строка (выводим только строки)
 
-   console.log(user123[i], typeof user123[i]);
+   console.log(user123[i], typeof user123[i]); // если элемент не строка, эта часть пропускается и цикла переходит к следующей итерации
 }
 
 console.log('BREAK EXAMPLE');
 
 for(let i = 0; i < user123.length; i++) {
-   if (typeof user123[i] === 'number') break;
+   if (typeof user123[i] === 'number') break; // елси элемент массива число break прерывает цикл
 
-   console.log(user123[i], typeof user123[i]);
+   console.log(user123[i], typeof user123[i]); 
 }
