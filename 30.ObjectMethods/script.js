@@ -1,43 +1,53 @@
-youraObject = {
-   name: 'YouRa',
-   lastname: 'Allakhverdov',
-   birthYear: 1974,
-   job: 'programming instructor',
-   familyMembers: ['Irina', 'Michael', 'YouRa'],
-   hasDriverLicense: false,
-   // calcAge: function (birthYear) {
-   //    return 2021 - birthYear;
-   // }
-   // calcAge: function () {
-   //    // console.log(this);
-   //    return 2021 - this.birthYear;
-   // }
+alekseiObject = { 
+   name: 'Aleksei', 
+   lastname: 'Kozlov', 
+   birthYear: 1990, 
+   job: 'programming engineer', 
+   friends: ['Dima', 'Ales', 'Korney'],
+   hasDriverLicense: true,
 
-   calcAge: function () {
+   calcAge: function(birthYear) {   // функция в объекте создает свойство calcAge 
+      return 2022 - birthYear;
+   }
+   calcAge: function () {   
+      console.log(this); // this - обращение к текущему объекту
+      return 2022 - this.birthYear; // this.свойство - обращение к свойству в текущем объекте (ссылка на объкт)
+   }
+
+   calcAge: function () {   
       // console.log(this);
-      this.age = 2021 - this.birthYear;
-      return 2021 - this.birthYear;
+      this.age = 2022 - this.birthYear;  // что бы добавить свойство в обьект через функцию с помощью this нужно хотя бы раз вызвать эту функцию
+      return this.age
    },
 
    getSummary: function () {
       return `${this.name} is a ${this.calcAge()}-year old ${this.job} and he has ${this.hasDriverLicense ? 'a' : 'no'} driver license`
    }
+
 };
 
-// console.log(youraObject.calcAge());
+// console.log(alekseiObject)
 
-// // console.log(youraObject['calcAge'](1974));
-// console.log(youraObject.calcAge());
-// console.log(youraObject.calcAge());
-// console.log(youraObject.calcAge());
-// console.log(youraObject.calcAge());
-// console.log(youraObject.age);
-// console.log(youraObject.age);
-// console.log(youraObject.age);
+
+// console.log(alekseiObject.calcAge());
+
+// // console.log(alekseiObject['calcAge'](1990));
+
+// console.log(alekseiObject.calcAge());
+// console.log(alekseiObject.calcAge());
+
+// alekseiObject.calcAge();
+// console.log(alekseiObject.age)
+
+
 
 
 // Challenge
+// 'Aleksei is a 32 year old programming engineer and he has a/no driver license'
 
-// 'YouRa is a 47-year old programming instructor and he has a/no driver license'
 
-console.log(youraObject.getSummary());
+// alekseiObject.calcAge();
+
+// console.log(`${alekseiObject.name} is a ${alekseiObject.age}-year od ${alekseiObject.job} and he has ${alekseiObject.hasDriverLicense ? 'a' : 'no'} driver license`); // Решение с тернарным оператором
+
+console.log(alekseiObject.getSummary())

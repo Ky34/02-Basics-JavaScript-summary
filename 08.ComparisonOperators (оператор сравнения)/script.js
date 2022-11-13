@@ -1,6 +1,6 @@
-// const x = '5';
-// const y = 5;
-// let isXMoreThenY = x  y;
+const x = '5';
+const y = 5;
+let isXMoreThenY = x  y;
 
 // ! = (!=) неравенство
 // == не строгий оператор равенства, проверяет значения

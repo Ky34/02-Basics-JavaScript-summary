@@ -1,39 +1,39 @@
 const numbers = [23, 54, 4, 31, 11];
 let result;
 
-result = numbers.length;
+result = numbers.length;  // Свойство массива длинна выводит длинну массива
 
-result = Array.isArray(numbers);
+result = Array.isArray(numbers); // метод определяет, является ли значение, хранящееся в переменной массивом выводит true\false
 
-result = numbers.indexOf(4);
+result = numbers.indexOf(4); // метод определяет порядковый номер элемента в массиве со значением 4
 
-// push() pop()
-result = numbers.push(7);
 
+// push()  pop()
+
+result = numbers.push(7); // добавляет эелемент в конец массива, возвращает длинну строки после добавления нового элемента
+
+result = numbers.pop(); // удаляет последний элемент массива, возвращает элемент, колторый был удален
 result = numbers.pop();
-result = numbers.pop();
-
-// unshift() shift()
-
-result = numbers.unshift(3);
-
-result = numbers.shift();
-
-result = numbers.push(1,22,33);
-result = numbers.unshift(1, 22, 33);
-
-result = numbers.splice(1, 1);
-result = numbers.splice(1, 3);
-
-result = numbers.reverse();
-
-result = numbers.slice(1, 4);
-
-result = numbers.concat(result);
 
 
+// unshift()   shift()
+
+result = numbers.unshift(3) // добавляет элемент в начало массива и возвращает длинну нового массива
+
+result = numbers.shift(); // удаляет первый элемент массива, возвращает элемент который был удален
+
+result = numbers.push(1, 22, 33); // можно добавлять несколько элементов в конец массива, возвращает длинну
+result = numbers.unshift(1, 22, 33); // можно добавлять несколько элементов в начало массива, возвращает длинну
+
+result = numbers.splice(1, 1);  // удаляет 1 или несколько элементов из массива, в скобках (с какого элемента, сколько элементов удалить), возвращает удаленный элемент
+result = numbers.splice(1, 3); // удаляет 3 элемента начинает с позиции 2, возвращает удаленные элементы
+
+result = numbers.reverse();  // выстраивает элементы массива в обратном порядке
+
+result = numbers.slice(1, 4); // вырезает часть массива начиная с 1 элемента включительно до 4 элемента не включая его, возвращает новый массив с вырезанными элементами не изменяя исходный массив
 
 
+result = numbers.concat(result); // соеденяет(конкотенирует) 2 массива, добавляя элементы в конец, возвращает новый массив
 
 
 

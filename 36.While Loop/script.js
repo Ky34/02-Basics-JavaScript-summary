@@ -41,26 +41,29 @@
 
 
 
-// Backwards iteration & loop in loop
-
-console.log('BACKWARDS ITERATION');
-
-const user123 = ['Aleksei', 'Kozlov', 1990, 'developer', ['Dims', 'Ales'], false];
+// While LOOP
 
 
-for (let i = user123.length - 1; i >= 0; i--) {
-   console.log(i, user123[i]);
+// console.log('FOR LOOP');
+// for (let rep = 1; rep <= 10; rep++) {
+//    console.log(`Push ups repetition ${rep}`);
+// }
+
+
+// console.log('WHILE LOOP');
+// let rep = 1;   // для цикла while переменная повторений определяется вне цикла
+
+// while (rep <= 10) {  // указываем услови пока повторений <= 10
+//    console.log(`Push ups repetition ${rep}`);
+//    rep++;  // изменение переменной задается в теле цикла
+// }
+
+let diceNumber = Math.trunc(Math.random() * 6) + 1; // Math.trunc - возвращает целое число
+
+console.log(`Dice number befor loop: ${diceNumber}`);
+
+while (diceNumber !== 6) { // выводит числа пока не выпадет 6, на 6 цикл завершается
+   console.log(diceNumber);
+   diceNumber = Math.trunc(Math.random() * 6) + 1; // каждый раз создается рандомное целое число от 1 до 6
+   console.log(`Dice number after random creation inside loop: ${diceNumber}`);
 }
-
-console.log('LOOP IN LOOP');
-
-for (let exercise = 1; exercise <= 3; exercise++) {
-   console.log(`Exercise ${exercise}`);
-   for (let rep = 1; rep <= 5; rep++) {
-      console.log(`Ex ${exercise} Rep ${rep}`);
-   }
-
-   console.log('Out of inner loop')
-}
-
-console.log('Out of outer loop')
