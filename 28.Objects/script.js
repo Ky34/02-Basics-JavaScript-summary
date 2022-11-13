@@ -1,18 +1,13 @@
-myData = [
-   'YouRa',
-   'Allakhverdov',
-   1974,
-   'programming instructor',
-   ['Irina', 'Michael']
-];
+myData = ['Aleksei', 'Kozlov', 1974, 'programming engineer', ['Dima', 'Ales']];
+
 console.log(myData[4]);
 
-youraObject = {
-   name: 'YouRa',
-   lastname: 'Allakhverdov',
-   birthYear: 1975,
-   job: 'programming instructor',
-   familyMembers: ['Irina', 'Michael']
+alekseiObject = {   // Объект содержит в себе пары ключ(свойство): значение, перечисляются через запятую
+   name: 'Aleksei', 
+   lastname: 'Kozlov', 
+   birthYear: 1990, 
+   job: 'programming engineer', 
+   friends: ['Dima', 'Ales']
 };
 
-
+// console.log(alekseiObject)

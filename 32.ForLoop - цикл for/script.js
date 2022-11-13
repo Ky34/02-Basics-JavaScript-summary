@@ -9,54 +9,14 @@
 // console.log('Push ups repetition 9');
 // console.log('Push ups repetition 10');
 
-// for(let rep = 1; rep <= 10; rep += 2) {
-//    console.log(`Push ups repetition ${rep}`);
-//    console.log('Hello!')
-// }
 
-// console.log('Out of loop');
+// ключевое слово for (инициализируем переменную-счетчик ; проверяется условие выхода из цикла ; изменение счетчика ){тело цикла}
 
-// const user123 = ['YouRa', 'Allakhverdov', 1974, 'developer', ['Irina', 'Michael'], false];
+// Как работает цикл: инициализируется переменная-счетчик, проводится проверка усливия, выполняется тело цикла, изменяется значение счетчика
 
-// const types = [];
-
-// for(let i = 0; i < user123.length; i++) {
-//    console.log(user123[i], typeof user123[i]);
-
-//    // types[i] = typeof user123[i];
-//    // types.push(typeof user123[i]);
-//    types.unshift(typeof user123[i]);
-// }
-
-// console.log(types);
-
-// const birthYears = [1974, 1994, 2000, 2003];
-// const ages = [];
-
-// for (let i = 0; i < birthYears.length; i++) {
-//    ages.push(2021 - birthYears[i]);
-// }
-
-// console.log(ages);
-
-
-
-// continue & break
-
-const user123 = ['YouRa', 'Allakhverdov', 1974, 'developer', ['Irina', 'Michael'], false];
-
-console.log('CONTINUE EXAMPLE');
-
-for(let i = 0; i < user123.length; i++) {
-   if (typeof user123[i] !== 'string') continue;
-
-   console.log(user123[i], typeof user123[i]);
+for (let rep = 1; rep <= 10 ; rep += 2) {  // присваиваем переменной кооличество повторений, поторяем от 1 до 10 включительно увеличивая переменную каждый раз на 2
+   console.log(`Push ups repetition ${rep}`); // Изменяет значения в строке соответственно каждому циклу от 1 до 10
+   console.log('Hello');
 }
 
-console.log('BREAK EXAMPLE');
-
-for(let i = 0; i < user123.length; i++) {
-   if (typeof user123[i] === 'number') break;
-
-   console.log(user123[i], typeof user123[i]);
-}
+console.log('Out of loop');
