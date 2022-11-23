@@ -39,16 +39,12 @@
 
 // console.log(ages);
 
-
-
 // While LOOP
-
 
 // console.log('FOR LOOP');
 // for (let rep = 1; rep <= 10; rep++) {
 //    console.log(`Push ups repetition ${rep}`);
 // }
-
 
 // console.log('WHILE LOOP');
 // let rep = 1;   // для цикла while переменная повторений определяется вне цикла
@@ -58,12 +54,26 @@
 //    rep++;  // изменение переменной задается в теле цикла
 // }
 
-let diceNumber = Math.trunc(Math.random() * 6) + 1; // Math.trunc - возвращает целое число
+// let diceNumber = Math.trunc(Math.random() * 6) + 1; // Math.trunc - возвращает целое число
 
-console.log(`Dice number befor loop: ${diceNumber}`);
+// console.log(`Dice number befor loop: ${diceNumber}`);
 
-while (diceNumber !== 6) { // выводит числа пока не выпадет 6, на 6 цикл завершается
-   console.log(diceNumber);
-   diceNumber = Math.trunc(Math.random() * 6) + 1; // каждый раз создается рандомное целое число от 1 до 6
-   console.log(`Dice number after random creation inside loop: ${diceNumber}`);
+// while (diceNumber !== 6) { // выводит числа пока не выпадет 6, на 6 цикл завершается
+//    console.log(diceNumber);
+//    diceNumber = Math.trunc(Math.random() * 6) + 1; // каждый раз создается рандомное целое число от 1 до 6
+//    console.log(`Dice number after random creation inside loop: ${diceNumber}`);
+// }
+
+function sumNumbers(number) {
+  number = String(number);
+  if (number.length >= 2) {
+    number = number.split('').reduce((acc, num) => acc + Number(num), 0);
+    return sumNumbers(number);
+  } else {
+    return console.log(number);
+  }
 }
+
+sumNumbers(341567);
+sumNumbers(341567444);
+sumNumbers(34156733);
