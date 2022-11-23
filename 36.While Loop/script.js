@@ -64,7 +64,7 @@
 //    console.log(`Dice number after random creation inside loop: ${diceNumber}`);
 // }
 
-function sumNumbers(number) {
+const sumNumbers = function (number) {
   number = String(number);
   if (number.length >= 2) {
     number = number.split('').reduce((acc, num) => acc + Number(num), 0);
@@ -72,8 +72,8 @@ function sumNumbers(number) {
   } else {
     return console.log(number);
   }
-}
+};
 
 sumNumbers(341567);
-sumNumbers(341567444);
+sumNumbers(367444);
 sumNumbers(34156733);
